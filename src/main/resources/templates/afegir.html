@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="container jumbotron" align="center">
-    <form class="input-group" method="post" action="#" th:action="${empleatForm.id!=0} ?${'/empleats/edit/submit'} : ${'/empleats/new/submit'}" th:object="${empleatForm}">
+    <form class="input-group" method="post" action="#" th:action="${empleatForm.id!=0} ?@{/empleats/edit/submit} : @{/empleats/new/submit}" th:object="${empleatForm}">
         <h1 th:text="${empleatForm.id!=0}?'Editar empleat': 'Nou empleat'">bla bla empleat</h1>
         <label>ID </label><br/><input type="text" id="id" placeholder="1" th:field="*{id}" th:attrappend="readonly=${empleatForm.id!=0}?'readonly':null"><br/>
         <label>Nom </label><br/><input type="text" id="nom" placeholder="Nom" th:field="*{nom}"><br/>

@@ -18,9 +18,6 @@
     <th>Email</th>
     <th>Telèfon</th>
     <th>Directiu</th>
-    <th></th>
-    <th></th>
-
 </tr></br>
 </thead>
 <tbody>
@@ -30,7 +27,7 @@
     <td th:text="${emp.email}">bla@ole.com</td>
     <td th:text="${emp.telefon}">123456789</td>
     <td th:text="${emp.directiu}">Directiu</td>
-    <td><a th:href="@{'/empleats/edit'(id=${emp.id})}">Editar</a></td>
+    <td><a th:href="@{'/empleats/edit'(id=${emp.id},nom=${emp.nom},email=${emp.email},telefon=${emp.telefon})}">Editar</a></td>
     <td><a th:href="@{'/empleats/eliminar'(id=${emp.id})}">Eliminar</a></td></br>
 </tr>
 </tbody>

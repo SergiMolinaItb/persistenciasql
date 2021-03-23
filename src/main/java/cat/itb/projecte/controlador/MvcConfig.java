@@ -15,6 +15,7 @@ public class MvcConfig implements WebMvcConfigurer {
         reg.addViewController("/error").setViewName("error.html");
         reg.addViewController("/home").setViewName("info.html");
         reg.addViewController("/new").setViewName("afegir.html");
+        reg.addViewController("/register").setViewName("register.html");
     }
 
     @Override

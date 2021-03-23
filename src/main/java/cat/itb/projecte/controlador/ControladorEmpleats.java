@@ -36,11 +36,17 @@ public class ControladorEmpleats {
     }
 
     @GetMapping("/empleats/edit")
-    public String afegirEmpleat(@RequestParam(value = "id",required = false) int id,Model m){
+    public String afegirEmpleat(@RequestParam(value = "id",required = false) int id,@RequestParam(value = "nom",required = false) String nom,@RequestParam(value = "email",required = false) String email,@RequestParam(value = "telefon",required = false) String telefon,Model m){
         Empleat nou = new Empleat();
         nou.setId(id);
+        nou.setNom(nom);
+        nou.setEmail(email);
+        nou.setTelefon(telefon);
         m.addAttribute("empleatForm",nou);
         m.addAttribute("id", id);
+        m.addAttribute("nom",nom);
+        m.addAttribute("email",email);
+        m.addAttribute("telefon",telefon);
         return "afegir";
     }
 

@@ -33,12 +33,12 @@ public class SecurityApplication extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/", "/registre","/templates/**","/error","/errorlogin","/login")
+                .antMatchers("/", "/register","/templates/**","/error","/errorlogin","/login")
                 .permitAll()
 
                 .antMatchers("/empleats/eliminar/**").hasRole("ADMIN")
                 .antMatchers("/empleats/new/**").hasRole("ADMIN")
-                .antMatchers("/webjars/**", "/css/**","/login","/", "/registre").permitAll()
+                .antMatchers("/webjars/**", "/css/**","/login","/", "/register/**").permitAll()
 
                 .anyRequest().authenticated()
                 .and()
