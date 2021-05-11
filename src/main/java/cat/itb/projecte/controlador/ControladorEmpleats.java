@@ -1,8 +1,7 @@
 package cat.itb.projecte.controlador;
 
 
-import cat.itb.projecte.model.entitat.Empleat;
-import cat.itb.projecte.model.servei.EmpleatService;
+import cat.itb.projecte.servei.EmpleatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

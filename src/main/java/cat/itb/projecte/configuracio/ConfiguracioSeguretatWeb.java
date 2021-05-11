@@ -1,6 +1,6 @@
-package cat.itb.projecte.security;
+package cat.itb.projecte.configuracio;
 
-import cat.itb.projecte.model.servei.ElMeuUserDetailsService;
+import cat.itb.projecte.servei.ElMeuUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,7 +12,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
-public class SecurityApplication extends WebSecurityConfigurerAdapter {
+public class ConfiguracioSeguretatWeb extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private ElMeuUserDetailsService userDetailsService;

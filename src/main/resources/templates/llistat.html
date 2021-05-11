@@ -23,10 +23,9 @@
 <tbody>
 <tr class="list-group" th:each="emp : ${llistaEmpleats}">
     <td th:text="${emp.id}">id</td>
-    <td th:text="${emp.nom}">Bla Bla Car</td>
-    <td th:text="${emp.email}">bla@ole.com</td>
-    <td th:text="${emp.telefon}">123456789</td>
-    <td th:text="${emp.directiu}">Directiu</td>
+    <td th:text="${emp.nom}">nom</td>
+    <td th:text="${emp.email}">e@mail.com</td>
+    <td th:text="${emp.telefon}">012345678</td>
     <td><a th:href="@{'/empleats/edit'(id=${emp.id},nom=${emp.nom},email=${emp.email},telefon=${emp.telefon})}">Editar</a></td>
     <td><a th:href="@{'/empleats/eliminar'(id=${emp.id})}">Eliminar</a></td></br>
 </tr>

@@ -1,4 +1,4 @@
-package cat.itb.projecte.controlador;
+package cat.itb.projecte.configuracio;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -6,7 +6,7 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-public class MvcConfig implements WebMvcConfigurer {
+public class ConfiguracioVistes implements WebMvcConfigurer {
 
     public void addViewControllers(ViewControllerRegistry reg) {
         reg.addViewController("/").setViewName("index.html");
